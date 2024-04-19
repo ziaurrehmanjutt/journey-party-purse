@@ -22,5 +22,9 @@ export class ModalHelperService {
     })
     
   }
+
+  async closeModel(data:any=[],role:string="",id: string | undefined=undefined){
+    this.modalController.dismiss(data,role,id)
+  }
  
 }

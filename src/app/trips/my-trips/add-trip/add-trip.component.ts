@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { HelperService } from 'src/app/services/helpers/helper.service';
 
 @Component({
   selector: 'app-add-trip',
@@ -7,8 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddTripComponent  implements OnInit {
 
-  constructor() { }
-
+  constructor(public helper:HelperService,private http: HttpClient) { 
+    this.loadCountries();
+   }
+   countries: any;
   ngOnInit() {}
+
+  loadCountries() {
+    this.http.get('assets/jsons/countries.json').subscribe(data => {
+      this.countries = data;
+    });
+  }
 
 }
