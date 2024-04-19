@@ -1,0 +1,66 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-row>
+    <ion-col (click)="navigateToOtherPage('trips')">
+      <ion-card class="ion-text-center ion-padding">
+        Journey Jar
+      </ion-card>
+
+    </ion-col>
+    <ion-col>
+      <ion-card class="ion-text-center ion-padding">
+        Meal Spinner
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card class="ion-text-center ion-padding">
+        Team & groups
+      </ion-card>
+    </ion-col>
+
+    <ion-col>
+      <ion-card class="ion-text-center ion-padding">
+        Budget Buddy
+      </ion-card>
+    </ion-col>
+
+    <ion-col>
+      <ion-card class="ion-text-center ion-padding">
+        Balances Dues
+      </ion-card>
+    </ion-col>
+
+    <ion-col>
+      <ion-card class="ion-text-center ion-padding">
+        Profile & Settings
+      </ion-card>
+    </ion-col>
+
+  </ion-row>
+</ion-content>
+
+
+
+<!-- <ion-modal [isOpen]="isJourneyModelOpen">
+  <ng-template>
+
+    <ion-content class="ion-padding">
+      <ion-button style="position: absolute;" (click)="isJourneyModelOpen = false;">Close</ion-button>
+      <div class="center-container">
+        <ion-button (click)="planTrip()" shape="round" expand="block" size="large" >Plan A trip</ion-button>
+        <ion-button (click)="findTrip()"  shape="round"  expand="full" size="large">Find A trip</ion-button>
+      </div>
+    </ion-content>
+  </ng-template>
+</ion-modal> -->

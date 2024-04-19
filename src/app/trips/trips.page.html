@@ -1,0 +1,16 @@
+
+  <!-- <ion-header>
+    <ion-toolbar>
+      <ion-title>Modal</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="isJourneyModelOpen = false;">Close</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header> -->
+  <ion-content class="ion-padding">
+    <ion-button style="position: absolute;" (click)="goBack();">Close</ion-button>
+    <div class="center-container">
+      <ion-button (click)="planTrip()" shape="round" expand="block" size="large" >Plan A trip</ion-button>
+      <ion-button (click)="findTrip()"  shape="round"  expand="full" size="large">Find A trip</ion-button>
+    </div>
+  </ion-content>
