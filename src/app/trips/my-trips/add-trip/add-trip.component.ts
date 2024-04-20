@@ -16,9 +16,11 @@ export class AddTripComponent  implements OnInit {
   ngOnInit() {}
 
   loadCountries() {
-    this.http.get('assets/jsons/countries.json').subscribe(data => {
-      this.countries = data;
-    });
+    // this.http.get('assets/jsons/all_states.json').subscribe(data => {
+    //   this.countries = data;
+
+    //   console.log(this.countries);
+    // });
   }
 
 }
