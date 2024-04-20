@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace "com.ziautil.partpurse"
+    namespace "com.ziautil.partypurse"
     compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "com.ziautil.partpurse"
+        applicationId "com.ziautil.partypurse"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

@@ -1,4 +1,4 @@
-package com.ziautil.partpurse;
+package com.ziautil.partypurse;
 
 import com.getcapacitor.BridgeActivity;
 

@@ -30,7 +30,7 @@ export class PostApiService {
 
     getApi(url: string, body: any, options: APIOptions) {
         return new Promise((resolve, reject) => {
-            this.http.post(url, body, { headers: this.getHeader(options) }).subscribe((data) => {
+            this.http.post(url, this.makePostData(body), { headers: this.getHeader(options) }).subscribe((data) => {
                 console.info(data);
                 resolve(data);
             }, (error) => {
@@ -38,5 +38,17 @@ export class PostApiService {
                 reject(error);
             })
         })
+    }
+
+    makePostData(frmData:any):FormData {
+        const formData = new FormData();
+
+        for (const key in frmData) {
+            if (frmData.hasOwnProperty(key)) {
+                const value = Array.isArray(frmData[key]) ? JSON.stringify(frmData[key]) : frmData[key];
+                formData.append(key, value);
+            }
+        }
+        return formData;
     }
 }
