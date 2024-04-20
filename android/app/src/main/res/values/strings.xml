@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Purse &amp; Party</string>
+    <string name="title_activity_main">Purse &amp; Party</string>
+    <string name="package_name">com.ziautil.partpurse</string>
+    <string name="custom_url_scheme">com.ziautil.partpurse</string>
+</resources>

@@ -9,6 +9,9 @@ import { HelperService } from 'src/app/services/helpers/helper.service';
 })
 export class AddTripComponent  implements OnInit {
 
+  frmData = {
+    title:""
+  }
   constructor(public helper:HelperService,private http: HttpClient) { 
     this.loadCountries();
    }
@@ -21,6 +24,10 @@ export class AddTripComponent  implements OnInit {
 
     //   console.log(this.countries);
     // });
+  }
+
+  onSubmit(){
+
   }
 
 }

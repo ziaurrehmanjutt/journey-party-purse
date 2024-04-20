@@ -3,46 +3,116 @@
     <ion-title>my-trips</ion-title>
 
 
-  <ion-buttons slot="end">
-    <ion-button (click)="helper.modal.closeModel()">
-      Close
-    </ion-button>
-  </ion-buttons>
-</ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="helper.modal.closeModel()">
+        Close
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
 
-  <div class="form">
-    <div>
-      <ion-label>Country</ion-label>
+  <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form">
       <div>
-        <ion-input class="form-input"></ion-input>
+        <ion-label>Title</ion-label>
+        <div>
+          <ion-input name="name" required minlength="3" [(ngModel)]="frmData.title" class="form-input"></ion-input>
+        </div>
       </div>
-    </div>
 
-    <div>
-      <ion-label>State</ion-label>
       <div>
-        <ion-input class="form-input"></ion-input>
+        <ion-label>Description</ion-label>
+        <div>
+          <ion-textarea class="area-input">
+
+          </ion-textarea>
+        </div>
       </div>
-    </div>
 
 
-    <div>
-      <ion-label>City</ion-label>
       <div>
-        <ion-input class="form-input"></ion-input>
+        <ion-label>From date</ion-label>
+        <div>
+          <ion-input type="date" class="form-input"></ion-input>
+        </div>
       </div>
-    </div>
 
-    <div>
-      <ion-label>Area</ion-label>
       <div>
-        <ion-input class="form-input"></ion-input>
+        <ion-label>To Date</ion-label>
+        <div>
+          <ion-input type="date" class="form-input"></ion-input>
+        </div>
       </div>
+
+      <div>
+        <ion-label>No Of Seats</ion-label>
+        <div>
+          <ion-input type="number" class="form-input"></ion-input>
+        </div>
+      </div>
+
+      <div>
+        <ion-label>Contact Email</ion-label>
+        <div>
+          <ion-input type="number" class="form-input"></ion-input>
+        </div>
+      </div>
+
+      <div>
+        <ion-label>Contact Number</ion-label>
+        <div>
+          <ion-input type="number" class="form-input"></ion-input>
+        </div>
+      </div>
+
+
+      <ion-card class="card-list">
+        <ion-card-header>
+          <ion-card-title>Pickup Location</ion-card-title>
+          <ion-button>
+            <ion-icon name="add"></ion-icon>
+          </ion-button>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-item>
+            <ion-label>
+              <h2>Gujarat, Pakistan</h2>
+              <p>Bus Stand, Ada 200, Area</p>
+            </ion-label>
+            <ion-button color="danger" fill="clear" slot="end">
+              <ion-icon name="trash"></ion-icon>
+            </ion-button>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="card-list">
+        <ion-card-header>
+          <ion-card-title>Trip Location</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+
+          <div class="no-list">
+            At least one Location is required
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="card-list">
+        <ion-card-header>
+          <ion-card-title>Pricing Plan</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+
+        </ion-card-content>
+      </ion-card>
+
+
+      <ion-button [disabled]="myForm.invalid">
+        Submit
+      </ion-button>
     </div>
-
-
-  </div>
+  </form>
 </ion-content>

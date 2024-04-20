@@ -8,4 +8,24 @@
         --padding-start: 5px;
         font-size: 20px;
     }
+    .card-list{
+        margin: 8px 0px;
+
+        .no-list{
+            background: #ff8f003b;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 14px;
+        
+        }
+    }
+    .area-input{
+        border: 1px solid #b3b3b3;
+        margin: 5px 0px 18px 0px;
+        border-radius: 5px;
+        background: #1e1e1e14;
+        --padding-start: 5px;
+        font-size: 20px;
+    }
 }

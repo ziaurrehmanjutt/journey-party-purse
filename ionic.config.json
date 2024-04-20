@@ -1,5 +1,7 @@
 {
   "name": "Purse & Party",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
