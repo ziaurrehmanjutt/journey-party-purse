@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { ConfigApiService } from './config-api.service';
+import { ListApiService } from './list-api.service';
+import { PostApiService } from './post-api.service';
 
 @Injectable({
     providedIn: 'root'
 })
 export class ApiService {
 
-    constructor(public config:ConfigApiService) { }
-    static SERVER_URL = "http://127.0.0.1:8000/";
+    constructor(public config:ConfigApiService, public list:ListApiService,public post:PostApiService) { }
+
     
 }

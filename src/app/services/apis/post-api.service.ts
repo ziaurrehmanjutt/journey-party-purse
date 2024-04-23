@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { ConfigApiService } from './config-api.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
+import {APIOptions} from "../data-types/api-request-type-class";
+ 
 @Injectable({
     providedIn: 'root'
 })
@@ -28,7 +29,19 @@ export class PostApiService {
         return opt;
     }
 
-    getApi(url: string, body: any, options: APIOptions) {
+    getApi(url: string, options: APIOptions) {
+        return new Promise((resolve, reject) => {
+            this.http.get(url,{ headers: this.getHeader(options) }).subscribe((data) => {
+                console.info(data);
+                resolve(data);
+            }, (error) => {
+                console.error(error);
+                reject(error);
+            })
+        })
+    }
+
+    postApi(url: string, body: any, options: APIOptions) {
         return new Promise((resolve, reject) => {
             this.http.post(url, this.makePostData(body), { headers: this.getHeader(options) }).subscribe((data) => {
                 console.info(data);

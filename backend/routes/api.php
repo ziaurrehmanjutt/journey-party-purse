@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
 use App\Http\Controllers\TripController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\LocationController;
 
 //Login
 Route::post('/login/token', [AuthController::class, 'authenticate']);
@@ -26,3 +27,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::put('/trips/{id}', [TripController::class, 'update']);
     Route::delete('/trips/{id}', [TripController::class, 'destroy']);
 });
+
+
+Route::get('countries', [LocationController::class, 'getCountries']);
+Route::get('states/{country_id}', [LocationController::class, 'getStates']);
+Route::get('cities/{state_id}', [LocationController::class, 'getCities']);
